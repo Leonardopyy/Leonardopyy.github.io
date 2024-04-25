@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+html,
+body {
+  font-family: Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+/*** Header and Welcome-section ***/
+
+.header {
+  background: #1c1c1c;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  z-index: 999;
+}
+.header h1 {
+  margin-top: 5px;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  padding: 0.5rem;
+}
+.link {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 0.5rem 0 0.5rem;
+}
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    45deg,
+    rgb(78, 83, 218),
+    rgb(168, 163, 163),
+    rgb(77, 65, 88)
+  );
+  color: #f1f1f1;
+  height: 90vh;
+}
+.welcome-section-text {
+  border: 3px double #fff;
+  border-radius: 5px;
+  padding: 5%;
+}
+.welcome-section h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+.welcome-section p {
+  font-size: 2rem;
+  margin-left: 10%;
+}
+
+/*** Projects Section ***/
+
+.projects-section {
+  background: linear-gradient(
+    38deg,
+    rgb(111, 140, 226),
+    rgb(75, 75, 99),
+    rgb(47, 93, 228)
+
+  );
+  padding: 10%;
+}
+.projects-section-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.projects-section-header hr {
+  width: 30%;
+  margin-bottom: 10%;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  background-color: #1f2d5b;
+  border-radius: 20px;
+  padding-bottom: 20%;
+}
+.project {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 2px 2px;
+}
+.project[alt="project5"], .project[alt="project6"],     
+.project[alt="project4"] {
+  filter: brightness(90%);
+}
+.project-title {
+  text-align: center;
+  margin-top: 5%;
+}
+
+/*** Contact Section ***/
+
+.contact-section {
+  background-color: #7c87ab;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  text-align: center;
+  border-top: 5px solid black;
+  height: 25vh;
+}
+.contact-section div {
+  margin-bottom: 5%;
+}
+.contact-details {
+  padding: 0 10px 0 10px;
+}
+footer {
+  text-align: center;
+  height: 10vh;
+  padding: 2%;
+  background: #585c79;
+}
+
+footer p {
+  margin-top: 3vh;
+}
+
+/*** Hovers ***/
+
+.link:hover {
+  transition: ease-in-out 500ms;
+  transform: scale(1.1) ;
+  background: rgb(87, 75, 175, 0.8);
+  border-radius: 2px;
+}
+
+/*** Media Queries ***/
+
+@media (min-width: 567px) {
+  
+  /*** Header and Welcome-Section ***/
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    height: 15vh;
+    width: 100%;
+    background: #1c1c1c;
+    color: #ffffff;
+    box-shadow: 0 1px  rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+  .header h1 {
+    position: relative;
+    
+  }
+  .nav-bar {
+    position: relative;
+    border: 1px solid white;    
+    padding: 5px;
+  }
+  .nav-list {
+    display: flex;
+    list-style: none;
+  }
+  .link {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.5rem 0 0.5rem;
+    height: 20px;
+  }
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+      45deg,
+      rgb(78, 83, 218),
+      rgb(168, 163, 163),
+      rgb(77, 65, 88)
+    );
+    color: #f1f1f1;
+    height: 90vh;
+  }
+  .welcome-section-text {
+    border: 3px double #fff;
+    border-radius: 5px;
+    padding: 5%;
+  }
+  .welcome-section h1 {
+    font-size: 4rem;
+    margin-bottom: 10px;
+  }
+  .welcome-section p {
+    font-size: 2rem;
+    margin-left: 10%;
+  }
+
+  /*** Contact-section ***/
+  .contact-section {
+    background-color: #7c87ab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    text-align: center;
+    border-top: 5px solid black;
+    height: 40vh;
+  }
+  footer {
+    height: 10vh;
+  }
+  footer p {
+    margin: auto;
+  }
+}
+@media (max-height: 358px) {
+  /*** Header and Welcome-section ***/
+  
+  .header {
+    height: 25vh;
+  }
+
+  .welcome-section {
+    height: 99vh;
+  }
+
+  .welcome-section-text {
+    margin-top: 15%;
+  }
+
+  .contact-section {
+    height: 50vh;
+  }
+}
